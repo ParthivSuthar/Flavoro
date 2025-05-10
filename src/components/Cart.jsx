@@ -23,7 +23,16 @@ function Cart() {
           />
         </div>
 
-        <ItemCard />
+        {cartItems.length > 0 ? cartItems.map((food) => (
+          <ItemCard
+            key={food.id}
+            id={food.id}
+            name={food.name}
+            price={food.price}
+            img={food.img}
+            qty={food.qty}
+          />
+        )) : <h2 className="text-center text-xl font-bold text-gray-800">Your cart is empty</h2>} 
 
         <div className="absolute bottom-0">
           <h3 className="font-semibold text-gray-800">Items: </h3>

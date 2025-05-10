@@ -24,7 +24,7 @@ function FoodCard({id, name, price, desc, img, rating,}) {
       </p>
       <div className="flex justify-between ">
         <span className="flex justify-center items-center"><AiFillStar className="mr-1 text-yellow-400" /> {rating}</span>
-        <button className="p-1 text-white bg-green-500 hover:bg-green-600 rounded-lg text-sm" onClick={() => dispatch(addToCart({id, name, price, rating, qty:1}))}>Add to Cart</button>
+        <button className="p-1 text-white bg-green-500 hover:bg-green-600 rounded-lg text-sm" onClick={() => dispatch(addToCart({id, name, price, rating,img, qty:1}))}>Add to Cart</button>
       </div>
     </div>
   );
