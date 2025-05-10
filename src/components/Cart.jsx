@@ -12,7 +12,8 @@ function Cart() {
           <IoMdClose className="border-2 border-gray-600 text-gray-600 font-bold  p-1 text-xl  rounded-md hover:text-red-300 hover:border-red-300 cursor-pointer" />
         </div>
 
-        <ItemCard /> Start from 1:18 hour
+        <ItemCard />
+        
 
         <div className="absolute bottom-0">
           <h3 className="font-semibold text-gray-800">Items: </h3>
