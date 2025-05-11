@@ -8,13 +8,20 @@ import {
   incrementQty,
   removeFromCart,
 } from "../redux/slices/CartSlice";
+import toast from "react-hot-toast";
 
 function ItemCard({ id, name, qty, price, img }) {
   const dispatch = useDispatch();
   return (
     <div className="flex gap-2 shadow-md rounded-lg p-2 mb-3">
       <MdDelete
-        onClick={() => dispatch(removeFromCart({ id, name, qty, price, img }))}
+        onClick={() => {dispatch(removeFromCart({ id, name, qty, price, img }));
+      
+        toast(`${name} Removed!`, {
+          icon: "👋"
+        })
+      } 
+      }
         className="absolute right-7 text-gray-600 cursor-pointer"
       />
       <img src={img} alt="" className="w-[50px] h-[50px]" />
